@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
+  const [lang, setLang] = useState('en');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+      <Navbar lang={lang} setLang={setLang} />
+      <Hero lang={lang} />
+      <About lang={lang} />
+      <Skills lang={lang} />
+      <Projects lang={lang} />
+      <Contact lang={lang} />
+      <Footer lang={lang} />
     </div>
   );
 }

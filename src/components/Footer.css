@@ -1,0 +1,21 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-name {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.footer-copy {
+  font-size: 12px;
+  opacity: 0.6;
+}
