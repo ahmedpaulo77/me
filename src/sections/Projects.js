@@ -30,6 +30,13 @@ const projects = [
     color: '#d97706',
   },
   {
+    title: 'Auto Parts Import & Export',
+    desc: { ar: 'موقع متكامل لشركة استيراد وتصدير قطع غيار السيارات لعرض المنتجات والخدمات', en: 'Auto parts import and export company website displaying products and services' },
+    tags: ['React', 'CSS', 'GitHub Pages'],
+    link: 'https://ahmedpaulo77.github.io/cars/',
+    color: '#e74c3c',
+  },
+  {
     title: 'Shiny Dental Clinic',
     desc: { ar: 'موقع عيادة أسنان د. أحمد إسلام في بنها', en: 'Dental clinic website for Dr. Ahmed Islam in Benha' },
     tags: ['React', 'React Router', 'CSS'],
