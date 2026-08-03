@@ -23,6 +23,13 @@ const projects = [
     color: '#6c63ff',
   },
   {
+    title: 'Bloom Kitchen Restaurant',
+    desc: { ar: 'موقع مطعم وتصفح منيو تفاعلي مع فلترة وميزة اللغات', en: 'Interactive restaurant menu website with filtering & multilingual support' },
+    tags: ['React', 'Framer Motion', 'CSS'],
+    link: 'https://ahmedpaulo77.github.io/food/',
+    color: '#d97706',
+  },
+  {
     title: 'Shiny Dental Clinic',
     desc: { ar: 'موقع عيادة أسنان د. أحمد إسلام في بنها', en: 'Dental clinic website for Dr. Ahmed Islam in Benha' },
     tags: ['React', 'React Router', 'CSS'],
