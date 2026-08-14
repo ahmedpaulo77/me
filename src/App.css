@@ -1,4 +1,4 @@
-/* src/App.css - نسخة معدلة (ألوان فاتحة + أنيميشن) */
+/* src/App.css - ألوان رئيسية جديدة (بدون أبيض صارخ) */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
 * {
@@ -8,15 +8,15 @@
 }
 
 :root {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-card: #ffffff;
-  --accent: #6366f1;
-  --accent-2: #8b5cf6;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --border: #e2e8f0;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --bg-primary: #f0f2f8;        /* رمادي فاتح جداً */
+  --bg-secondary: #e6e9f2;       /* رمادي فاتح */
+  --bg-card: #ffffff;            /* أبيض ناصع للبطاقات فقط */
+  --accent: #6366f1;             /* بنفسجي */
+  --accent-2: #8b5cf6;           /* بنفسجي فاتح */
+  --text-primary: #0f172a;       /* أزرق غامق */
+  --text-secondary: #475569;     /* رمادي */
+  --border: #d1d5e0;             /* رمادي فاتح */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   --shadow-hover: 0 12px 40px rgba(99, 102, 241, 0.12);
   --radius: 16px;
   --radius-sm: 10px;
@@ -43,7 +43,7 @@ a {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
 .section-title {
@@ -61,10 +61,10 @@ a {
   font-size: 16px;
   color: var(--text-secondary);
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
-/* ===== أنيميشن الظهور عند التمرير (Scroll Animation) ===== */
+/* ===== أنيميشن ===== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -87,18 +87,6 @@ a {
   }
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* تطبيق الأنيميشن على العناصر */
 .section,
 .hero,
 .about,
@@ -112,43 +100,15 @@ a {
 .skill-item,
 .contact-card {
   animation: fadeIn 0.6s ease forwards;
-  opacity: 0; /* يبدأ مخفي */
+  opacity: 0;
 }
 
-/* تأخير ظهور البطاقات بشكل متتالي */
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 .project-card:nth-child(5) { animation-delay: 0.5s; }
 .project-card:nth-child(6) { animation-delay: 0.6s; }
-
-/* ===== أنيميشن الخفقان للشعار أو الأزرار ===== */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
-.btn-primary:hover {
-  animation: pulse 0.6s ease infinite;
-}
-
-/* ===== أنيميشن الكتابة (Typing) للهيرو ===== */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.cursor {
-  animation: blink 0.8s infinite;
-}
-
-/* ===== تحسين ظهور البطاقات عند التمرير (Intersection Observer) ===== */
-/* هتضاف عن طريق JavaScript في ملف منفصل، لكن نقدر نستخدم CSS basic */
 
 /* ===== زر واتساب ===== */
 .whatsapp-float {

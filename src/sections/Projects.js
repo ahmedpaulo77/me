@@ -1,4 +1,4 @@
-// src/components/Projects.js
+// src/sections/Projects.js - المشاريع الجديدة في الأول
 import React from 'react';
 import './Projects.css';
 
@@ -16,6 +16,22 @@ const content = {
 };
 
 const projects = [
+  // ✅ المشاريع الجديدة في الأول
+  {
+    title: 'SaaS PRO – Business Platform',
+    desc: { ar: 'منصة SaaS متكاملة لإدارة الشركات والعملاء والفواتير والمخزون والمهام مع تقارير بيانية وتصدير PDF', en: 'Full-featured SaaS platform for companies, clients, invoices, inventory, tasks, and reports with PDF/Excel export' },
+    tags: ['React', 'Firebase', 'Vercel'],
+    link: 'https://saas-platform-sandy.vercel.app/',
+    color: '#6366f1',
+  },
+  {
+    title: 'BookFlow – Booking System',
+    desc: { ar: 'نظام حجوزات SaaS متعدد الفروع مع إدارة المواعيد والخدمات', en: 'Multi-branch SaaS booking system with appointments and services management' },
+    tags: ['React', 'Firebase', 'Vercel'],
+    link: 'https://bookflow-amber.vercel.app/',
+    color: '#f59e0b',
+  },
+  // ... باقي المشاريع
   {
     title: 'RWCON - Landscaping Company',
     desc: { ar: 'موقع شركة ركن المقاولات السعودية للمناظر الطبيعية والمسابح في تبوك', en: 'Saudi landscaping & pools company website in Tabuk' },
@@ -78,21 +94,6 @@ const projects = [
     tags: ['React', 'React Router', 'CSS'],
     link: 'https://ahmedpaulo77.github.io/etqan/#/',
     color: '#D4AF37',
-  },
-  // ✅ المشاريع الجديدة
-  {
-    title: 'SaaS PRO – Business Platform',
-    desc: { ar: 'منصة SaaS متكاملة لإدارة الشركات والعملاء والفواتير والمخزون والمهام مع تقارير بيانية وتصدير PDF', en: 'Full-featured SaaS platform for companies, clients, invoices, inventory, tasks, and reports with PDF/Excel export' },
-    tags: ['React', 'Firebase', 'Vercel'],
-    link: 'https://saas-platform-sandy.vercel.app/',
-    color: '#6366f1',
-  },
-  {
-    title: 'BookFlow – Booking System',
-    desc: { ar: 'نظام حجوزات SaaS متعدد الفروع مع إدارة المواعيد والخدمات', en: 'Multi-branch SaaS booking system with appointments and services management' },
-    tags: ['React', 'Firebase', 'Vercel'],
-    link: 'https://bookflow-amber.vercel.app/',
-    color: '#f59e0b',
   },
 ];
 

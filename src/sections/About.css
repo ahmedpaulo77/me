@@ -1,3 +1,4 @@
+/* src/sections/About.css - تصميم محسّن */
 .about {
   background: var(--bg-secondary);
 }
@@ -36,6 +37,13 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.about-info:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
 }
 
 .info-row {
@@ -63,6 +71,28 @@
   direction: ltr;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-text h3 {
+    font-size: 24px;
+  }
+
+  .about-info {
+    padding: 20px;
+  }
+
+  .info-row {
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .info-label {
+    min-width: 70px;
+  }
 }

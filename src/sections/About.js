@@ -1,3 +1,4 @@
+// src/sections/About.js - نسخة معدلة (من غير دفعة)
 import React from 'react';
 import './About.css';
 
@@ -11,8 +12,8 @@ const content = {
     btn: 'تواصل معي',
     info: [
       { label: 'الاسم', value: 'Ahmed Abdelmaqsoud' },
-      { label: 'التخصص', value: 'Frontend Developer' },
-      { label: 'الجامعة', value: 'Future University in Egypt (FUE)' },
+      { label: 'الRole', value: 'Front-End Web Developer | React.js | Firebase | JavaScript' },
+      { label: 'الجامعة', value: 'Graduate ofFuture University in Egypt (FUE)' },
       { label: 'الموبايل', value: '01220811060' },
       { label: 'الإيميل', value: 'p638599@gmail.com' },
       { label: 'المتاحية', value: 'Freelance - متاح للعمل' },
@@ -27,8 +28,8 @@ const content = {
     btn: 'Contact Me',
     info: [
       { label: 'Name', value: 'Ahmed Abdelmaqsoud' },
-      { label: 'Role', value: 'Frontend Developer' },
-      { label: 'University', value: 'Future University in Egypt (FUE)' },
+      { label: 'Role', value: 'Front-End Web Developer | React.js | Firebase | JavaScript' },
+      { label: 'University', value: 'Graduate of Future University in Egypt (FUE)' },
       { label: 'Phone', value: '01220811060' },
       { label: 'Email', value: 'p638599@gmail.com' },
       { label: 'Availability', value: 'Freelance - Available' },
