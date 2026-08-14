@@ -1,3 +1,4 @@
+/* src/App.css - نسخة معدلة (ألوان فاتحة + أنيميشن) */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap');
 
 * {
@@ -7,14 +8,19 @@
 }
 
 :root {
-  --bg-primary: #1a1830;
-  --bg-secondary: #211f35;
-  --bg-card: #272540;
-  --accent: #7c6ff7;
-  --accent-2: #f472b6;
-  --text-primary: #f1f0f9;
-  --text-secondary: #b8b0d8;
-  --border: #35325a;
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --accent: #6366f1;
+  --accent-2: #8b5cf6;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border: #e2e8f0;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 12px 40px rgba(99, 102, 241, 0.12);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -56,4 +62,125 @@ a {
   color: var(--text-secondary);
   text-align: center;
   margin-bottom: 60px;
+}
+
+/* ===== أنيميشن الظهور عند التمرير (Scroll Animation) ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* تطبيق الأنيميشن على العناصر */
+.section,
+.hero,
+.about,
+.skills,
+.projects,
+.contact {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.project-card,
+.skill-item,
+.contact-card {
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0; /* يبدأ مخفي */
+}
+
+/* تأخير ظهور البطاقات بشكل متتالي */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===== أنيميشن الخفقان للشعار أو الأزرار ===== */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.btn-primary:hover {
+  animation: pulse 0.6s ease infinite;
+}
+
+/* ===== أنيميشن الكتابة (Typing) للهيرو ===== */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  animation: blink 0.8s infinite;
+}
+
+/* ===== تحسين ظهور البطاقات عند التمرير (Intersection Observer) ===== */
+/* هتضاف عن طريق JavaScript في ملف منفصل، لكن نقدر نستخدم CSS basic */
+
+/* ===== زر واتساب ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  background: #25d366;
+  color: #fff;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  box-shadow: 0 4px 24px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 36px rgba(37, 211, 102, 0.6);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 54px;
+    height: 54px;
+    font-size: 28px;
+    bottom: 20px;
+    left: 20px;
+  }
 }

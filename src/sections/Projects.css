@@ -1,32 +1,58 @@
+/* src/components/Projects.css */
+@import url('https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css');
+
 .projects {
+  padding: 80px 0;
   background: var(--bg-secondary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  gap: 28px;
 }
 
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
   overflow: hidden;
-  transition: all 0.25s;
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--shadow);
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+  box-shadow: var(--shadow-hover);
   border-color: var(--accent);
 }
 
 .project-top {
   background: var(--bg-secondary);
-  padding: 12px 16px;
+  padding: 14px 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,9 +71,9 @@
 }
 
 .project-link-icon {
-  font-size: 18px;
+  font-size: 20px;
   color: var(--text-secondary);
-  transition: color 0.2s;
+  transition: var(--transition);
 }
 
 .project-link-icon:hover {
@@ -55,16 +81,15 @@
 }
 
 .project-body {
-  padding: 20px;
+  padding: 22px 20px;
   flex: 1;
 }
 
 .project-title {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 10px;
-  direction: ltr;
 }
 
 .project-desc {
@@ -80,7 +105,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .project-tags {
@@ -92,22 +117,33 @@
 .tag {
   font-size: 11px;
   font-weight: 600;
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
   border: 1px solid;
   font-family: 'Fira Code', monospace;
 }
 
 .project-btn {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 8px;
   color: #fff;
-  transition: opacity 0.2s;
+  transition: var(--transition);
   white-space: nowrap;
 }
 
 .project-btn:hover {
   opacity: 0.85;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
