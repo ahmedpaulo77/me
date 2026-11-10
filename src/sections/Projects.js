@@ -18,6 +18,13 @@ const content = {
 const projects = [
   // ✅ المشاريع الجديدة في الأول
   {
+    title: 'Law Office – Legal Consultancy',
+    desc: { ar: 'موقع مكتب محاماة واستشارات قانونية بتجربة بصرية ثلاثية الأبعاد مع انيميشن متقدم', en: 'Law office & legal consultancy website with immersive 3D visuals and advanced animations' },
+    tags: ['React', 'Three.js', 'GSAP', 'Vite'],
+    link: 'https://ahmedpaulo77.github.io/law/',
+    color: '#8B6914',
+  },
+  {
     title: 'SaaS PRO – Business Platform',
     desc: { ar: 'منصة SaaS متكاملة لإدارة الشركات والعملاء والفواتير والمخزون والمهام مع تقارير بيانية وتصدير PDF', en: 'Full-featured SaaS platform for companies, clients, invoices, inventory, tasks, and reports with PDF/Excel export' },
     tags: ['React', 'Firebase', 'Vercel'],
