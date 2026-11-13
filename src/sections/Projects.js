@@ -18,6 +18,13 @@ const content = {
 const projects = [
   // ✅ المشاريع الجديدة في الأول
   {
+    title: 'Élégance – Women\'s Fashion Boutique',
+    desc: { ar: 'متجر أزياء نسائية راقي بتصميم باريسي أنيق', en: 'Elegant women\'s fashion boutique with a Parisian atelier feel' },
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://ahmedpaulo77.github.io/Elegance/',
+    color: '#c2185b',
+  },
+  {
     title: 'Law Office – Legal Consultancy',
     desc: { ar: 'موقع مكتب محاماة واستشارات قانونية بتجربة بصرية ثلاثية الأبعاد مع انيميشن متقدم', en: 'Law office & legal consultancy website with immersive 3D visuals and advanced animations' },
     tags: ['React', 'Three.js', 'GSAP', 'Vite'],
