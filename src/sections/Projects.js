@@ -18,6 +18,13 @@ const content = {
 const projects = [
   // ✅ المشاريع الجديدة في الأول
   {
+    title: 'الكويرة – Football Quiz Platform',
+    desc: { ar: 'منصة أسئلة وتريفيا كرة القدم التفاعلية', en: 'Interactive football quiz & trivia platform' },
+    tags: ['React', 'Node.js', 'JavaScript', 'CSS'],
+    link: 'https://www.elkwayra.com/',
+    color: '#2e7d32',
+  },
+  {
     title: 'Élégance – Women\'s Fashion Boutique',
     desc: { ar: 'متجر أزياء نسائية راقي بتصميم باريسي أنيق', en: 'Elegant women\'s fashion boutique with a Parisian atelier feel' },
     tags: ['HTML', 'CSS', 'JavaScript'],
