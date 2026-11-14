@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a2e; display: flex; justify-content: center; align-items: center; height: 100vh; }
+  </style>
+</head>
+<body>
+  <canvas id="c" width="1200" height="630"></canvas>
+  <script>
+    const canvas = document.getElementById('c');
+    const ctx = canvas.getContext('2d');
+
+    // Background gradient
+    const bg = ctx.createLinearGradient(0, 0, 1200, 630);
+    bg.addColorStop(0, '#f0f2f8');
+    bg.addColorStop(1, '#e6e9f2');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, 1200, 630);
+
+    // Accent bar top
+    const bar = ctx.createLinearGradient(0, 0, 1200, 0);
+    bar.addColorStop(0, '#6366f1');
+    bar.addColorStop(1, '#8b5cf6');
+    ctx.fillStyle = bar;
+    ctx.fillRect(0, 0, 1200, 8);
+
+    // Decorative circle
+    ctx.beginPath();
+    ctx.arc(1050, 100, 220, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(99,102,241,0.08)';
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(150, 530, 160, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(139,92,246,0.07)';
+    ctx.fill();
+
+    // Name
+    ctx.font = 'bold 72px Arial, sans-serif';
+    const grad = ctx.createLinearGradient(100, 200, 700, 300);
+    grad.addColorStop(0, '#6366f1');
+    grad.addColorStop(1, '#8b5cf6');
+    ctx.fillStyle = grad;
+    ctx.fillText('Ahmed Abdelmaqsoud', 100, 280);
+
+    // Title
+    ctx.font = '36px Arial, sans-serif';
+    ctx.fillStyle = '#475569';
+    ctx.fillText('Front-End Developer', 100, 350);
+
+    // Tech tags - row 1
+    const row1 = ['React', 'JavaScript', 'HTML', 'CSS'];
+    const row2 = ['Three.js', 'GSAP', 'Firebase', 'Node.js', 'Vite'];
+
+    ctx.font = 'bold 20px Arial, sans-serif';
+
+    let x = 100;
+    row1.forEach(tag => {
+      const w = ctx.measureText(tag).width + 40;
+      ctx.fillStyle = 'rgba(99,102,241,0.12)';
+      ctx.beginPath();
+      ctx.roundRect(x, 390, w, 44, 10);
+      ctx.fill();
+      ctx.fillStyle = '#6366f1';
+      ctx.fillText(tag, x + 20, 418);
+      x += w + 14;
+    });
+
+    x = 100;
+    row2.forEach(tag => {
+      const w = ctx.measureText(tag).width + 40;
+      ctx.fillStyle = 'rgba(139,92,246,0.12)';
+      ctx.beginPath();
+      ctx.roundRect(x, 450, w, 44, 10);
+      ctx.fill();
+      ctx.fillStyle = '#8b5cf6';
+      ctx.fillText(tag, x + 20, 478);
+      x += w + 14;
+    });
+
+    // URL
+    ctx.font = '22px Arial, sans-serif';
+    ctx.fillStyle = '#8b5cf6';
+    ctx.fillText('ahmedpaulo77.github.io/me', 100, 550);
+
+    // Download
+    const link = document.createElement('a');
+    link.download = 'og-image.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  </script>
+</body>
+</html>
