@@ -96,19 +96,25 @@ a {
   animation: fadeUp 0.8s ease forwards;
 }
 
-.project-card,
-.skill-item,
-.contact-card {
-  animation: fadeIn 0.6s ease forwards;
+/* ===== Scroll reveal ===== */
+.reveal {
   opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-.project-card:nth-child(6) { animation-delay: 0.6s; }
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* ===== زر واتساب ===== */
 .whatsapp-float {

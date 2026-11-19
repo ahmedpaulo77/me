@@ -4,15 +4,15 @@ import './Hero.css';
 const content = {
   ar: {
     greeting: 'مرحباً، أنا 👋',
-    titles: ['Frontend Developer', 'React Developer', 'UI Developer'],
-    desc: 'مطور واجهات أمامية متخصص في React.js، أبني مواقع وتطبيقات ويب احترافية وسريعة وجميلة.',
+    titles: ['Front-End Developer', 'React & Firebase Developer', 'UI Developer'],
+    desc: 'مطور واجهات أمامية متخصص في React.js وFirebase، أبني مواقع وتطبيقات ويب احترافية وسريعة وجميلة — من الفكرة للنشر.',
     btn1: 'شوف مشاريعي',
     btn2: 'تواصل معي',
   },
   en: {
     greeting: "Hi, I'm 👋",
-    titles: ['Frontend Developer', 'React Developer', 'UI Developer'],
-    desc: 'Frontend developer specialized in React.js, building professional, fast and beautiful web applications.',
+    titles: ['Front-End Developer', 'React & Firebase Developer', 'UI Developer'],
+    desc: 'Front-end developer specialized in React.js and Firebase, building professional, fast and beautiful web applications — from idea to deployment.',
     btn1: 'View Projects',
     btn2: 'Contact Me',
   },
@@ -62,14 +62,14 @@ function Hero({ lang }) {
           <a href="#contact" className="btn-outline">{t.btn2}</a>
         </div>
         <div className="hero-social">
-          <a href="https://github.com/ahmedpaulo77" target="_blank" rel="noreferrer" className="social-link">
-            <i className="ti ti-brand-github"></i>
+          <a href="https://github.com/ahmedpaulo77" target="_blank" rel="noreferrer" className="social-link" aria-label="GitHub">
+            <i className="ti ti-brand-github" aria-hidden="true"></i>
           </a>
-          <a href="https://wa.me/201220811060" target="_blank" rel="noreferrer" className="social-link">
-            <i className="ti ti-brand-whatsapp"></i>
+          <a href="https://wa.me/201220811060" target="_blank" rel="noreferrer" className="social-link" aria-label="WhatsApp">
+            <i className="ti ti-brand-whatsapp" aria-hidden="true"></i>
           </a>
-          <a href="mailto:p638599@gmail.com" className="social-link">
-            <i className="ti ti-mail"></i>
+          <a href="mailto:p638599@gmail.com" className="social-link" aria-label="Email">
+            <i className="ti ti-mail" aria-hidden="true"></i>
           </a>
         </div>
       </div>

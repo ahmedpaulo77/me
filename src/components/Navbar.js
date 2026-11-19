@@ -33,6 +33,12 @@ function Navbar({ lang, setLang }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // منع تمرير الصفحة ورا منيو الموبايل
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [menuOpen]);
+
   const t = content[lang];
 
   return (
@@ -44,13 +50,19 @@ function Navbar({ lang, setLang }) {
           <span className="logo-bracket">/&gt;</span>
         </a>
 
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
+          aria-expanded={menuOpen}
+          aria-controls="main-menu"
+        >
           <span className={`hamburger ${menuOpen ? 'open' : ''}`}></span>
         </button>
 
-        <ul className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          {t.links.map((link, i) => (
-            <li key={i}>
+        <ul id="main-menu" className={`navbar-links ${menuOpen ? 'open' : ''}`}>
+          {t.links.map((link) => (
+            <li key={link.href}>
               <a href={link.href} onClick={() => setMenuOpen(false)}>
                 {link.label}
               </a>
@@ -60,6 +72,7 @@ function Navbar({ lang, setLang }) {
             <button
               className="lang-toggle"
               onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
+              aria-label={lang === 'ar' ? 'Switch to English' : 'التبديل للعربية'}
             >
               {lang === 'ar' ? 'EN' : 'عربي'}
             </button>

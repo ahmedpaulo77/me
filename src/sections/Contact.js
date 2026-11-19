@@ -11,7 +11,7 @@ const content = {
     items: [
       { icon: 'ti-brand-whatsapp', label: 'واتساب', value: '01220811060', link: 'https://wa.me/201220811060', color: '#25D366' },
       { icon: 'ti-mail', label: 'الإيميل', value: 'p638599@gmail.com', link: 'mailto:p638599@gmail.com', color: '#7c6ff7' },
-      { icon: 'ti-brand-github', label: 'GitHub', value: 'ahmedpaulo77', link: 'https://github.com/ahmedpaulo77', color: '#f1f1f1' },
+      { icon: 'ti-brand-github', label: 'GitHub', value: 'ahmedpaulo77', link: 'https://github.com/ahmedpaulo77', color: '#24292f' },
     ],
   },
   en: {
@@ -23,7 +23,7 @@ const content = {
     items: [
       { icon: 'ti-brand-whatsapp', label: 'WhatsApp', value: '01220811060', link: 'https://wa.me/201220811060', color: '#25D366' },
       { icon: 'ti-mail', label: 'Email', value: 'p638599@gmail.com', link: 'mailto:p638599@gmail.com', color: '#7c6ff7' },
-      { icon: 'ti-brand-github', label: 'GitHub', value: 'ahmedpaulo77', link: 'https://github.com/ahmedpaulo77', color: '#f1f1f1' },
+      { icon: 'ti-brand-github', label: 'GitHub', value: 'ahmedpaulo77', link: 'https://github.com/ahmedpaulo77', color: '#24292f' },
     ],
   },
 };

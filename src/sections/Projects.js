@@ -1,4 +1,4 @@
-// src/sections/Projects.js - المشاريع الجديدة في الأول
+// src/sections/Projects.js - المشاريع مرتبة بالأقوى أولاً
 import React from 'react';
 import './Projects.css';
 
@@ -16,103 +16,143 @@ const content = {
 };
 
 const projects = [
-  // ✅ المشاريع الجديدة في الأول
+  {
+    title: 'SaaS PRO – Business Platform',
+    desc: {
+      ar: 'منصة SaaS متكاملة لإدارة الشركات والفواتير والمخزون ونقطة البيع والمهام، بـ7 أدوار و11 قطاع، مع تقارير قابلة للطباعة وتصدير Excel',
+      en: 'Full-featured SaaS platform for companies, invoices, inventory, POS and tasks — 7 roles, 11 industries, print-ready reports and Excel export',
+    },
+    tags: ['React', 'Firebase', 'Vite', 'Vercel'],
+    link: 'https://saas-platform-sandy.vercel.app/',
+    color: '#6366f1',
+  },
   {
     title: 'الكويرة – Football Quiz Platform',
-    desc: { ar: 'منصة أسئلة وتريفيا كرة القدم التفاعلية', en: 'Interactive football quiz & trivia platform' },
-    tags: ['React', 'Node.js', 'JavaScript', 'CSS'],
+    desc: {
+      ar: '7 ألعاب كورة جماعية ثنائية اللغة، +1000 سؤال، من غير backend',
+      en: 'Seven bilingual football party games with 1,000+ questions — zero-backend static site',
+    },
+    tags: ['React', 'Vite', 'JavaScript', 'CSS'],
     link: 'https://www.elkwayra.com/',
     color: '#2e7d32',
   },
   {
-    title: 'Élégance – Women\'s Fashion Boutique',
-    desc: { ar: 'متجر أزياء نسائية راقي بتصميم باريسي أنيق', en: 'Elegant women\'s fashion boutique with a Parisian atelier feel' },
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://ahmedpaulo77.github.io/Elegance/',
-    color: '#c2185b',
-  },
-  {
     title: 'Law Office – Legal Consultancy',
-    desc: { ar: 'موقع مكتب محاماة واستشارات قانونية بتجربة بصرية ثلاثية الأبعاد مع انيميشن متقدم', en: 'Law office & legal consultancy website with immersive 3D visuals and advanced animations' },
+    desc: {
+      ar: 'موقع مكتب محاماة واستشارات قانونية بتجربة بصرية ثلاثية الأبعاد مع انيميشن متقدم',
+      en: 'Law office & legal consultancy website with immersive 3D visuals and advanced animations',
+    },
     tags: ['React', 'Three.js', 'GSAP', 'Vite'],
     link: 'https://ahmedpaulo77.github.io/law/',
     color: '#8B6914',
   },
   {
-    title: 'SaaS PRO – Business Platform',
-    desc: { ar: 'منصة SaaS متكاملة لإدارة الشركات والعملاء والفواتير والمخزون والمهام مع تقارير بيانية وتصدير PDF', en: 'Full-featured SaaS platform for companies, clients, invoices, inventory, tasks, and reports with PDF/Excel export' },
-    tags: ['React', 'Firebase', 'Vercel'],
-    link: 'https://saas-platform-sandy.vercel.app/',
-    color: '#6366f1',
-  },
-  {
     title: 'BookFlow – Booking System',
-    desc: { ar: 'نظام حجوزات SaaS متعدد الفروع مع إدارة المواعيد والخدمات', en: 'Multi-branch SaaS booking system with appointments and services management' },
-    tags: ['React', 'Firebase', 'Vercel'],
+    desc: {
+      ar: 'نظام حجوزات متعدد الفروع مع منع تعارض المواعيد وإدارة الخدمات',
+      en: 'Multi-branch booking system with conflict-free scheduling and services management',
+    },
+    tags: ['React', 'Firebase', 'React Router', 'Vercel'],
     link: 'https://bookflow-amber.vercel.app/',
     color: '#f59e0b',
   },
-  // ... باقي المشاريع
   {
-    title: 'RWCON - Landscaping Company',
-    desc: { ar: 'موقع شركة ركن المقاولات السعودية للمناظر الطبيعية والمسابح في تبوك', en: 'Saudi landscaping & pools company website in Tabuk' },
-    tags: ['React', 'CSS', 'GitHub Pages'],
-    link: 'https://ahmedpaulo77.github.io/rwcon/#/',
+    title: 'RWCON – Landscaping & Contracting',
+    desc: {
+      ar: 'موقع شركة روكن للمقاولات والمساحات الخضراء في تبوك: 9 صفحات وكتالوج 49 منتج وألبومات مشاريع',
+      en: 'RWCON contracting & landscaping website (Tabuk): 9 pages, 49-product catalog and project galleries',
+    },
+    tags: ['React', 'React Router', 'CSS', 'GitHub Pages'],
+    link: 'https://rwcon-sa.com',
     color: '#6c63ff',
   },
   {
     title: 'Bloom Kitchen Restaurant',
-    desc: { ar: 'موقع مطعم وتصفح منيو تفاعلي مع فلترة وميزة اللغات', en: 'Interactive restaurant menu website with filtering & multilingual support' },
+    desc: {
+      ar: 'موقع مطعم ومنيو تفاعلي بفلترة وترجمة',
+      en: 'Restaurant site with an interactive, filterable bilingual menu',
+    },
     tags: ['React', 'Framer Motion', 'CSS'],
     link: 'https://ahmedpaulo77.github.io/food/',
     color: '#d97706',
   },
   {
     title: 'Auto Parts Import & Export',
-    desc: { ar: 'موقع متكامل لشركة استيراد وتصدير قطع غيار السيارات لعرض المنتجات والخدمات', en: 'Auto parts import and export company website displaying products and services' },
-    tags: ['React', 'CSS', 'GitHub Pages'],
+    desc: {
+      ar: 'موقع متكامل لشركة استيراد وتصدير قطع غيار السيارات لعرض المنتجات والخدمات',
+      en: 'Auto parts import and export company website displaying products and services',
+    },
+    tags: ['React', 'Firebase', 'CSS', 'GitHub Pages'],
     link: 'https://ahmedpaulo77.github.io/cars/',
     color: '#e74c3c',
   },
   {
     title: 'Shiny Dental Clinic',
-    desc: { ar: 'موقع عيادة أسنان د. أحمد إسلام في بنها', en: 'Dental clinic website for Dr. Ahmed Islam in Benha' },
-    tags: ['React', 'React Router', 'CSS'],
+    desc: {
+      ar: 'موقع عيادة أسنان د. أحمد إسلام في بنها',
+      en: 'Dental clinic website for Dr. Ahmed Islam in Benha',
+    },
+    tags: ['React', 'Vite', 'React Router', 'CSS'],
     link: 'https://ahmedpaulo77.github.io/shiny-dental/#/',
     color: '#00b4d8',
   },
   {
     title: 'Hayah Nutrition Clinic',
-    desc: { ar: 'موقع عيادة تغذية د. أحمد مجدي بثلاث فروع', en: 'Nutrition clinic website with 3 branches' },
-    tags: ['React', 'CSS', 'GitHub Pages'],
+    desc: {
+      ar: 'موقع عيادة تغذية د. أحمد مجدي بثلاث فروع',
+      en: 'Nutrition clinic website with 3 branches',
+    },
+    tags: ['React', 'Firebase', 'CSS', 'GitHub Pages'],
     link: 'https://ahmedpaulo77.github.io/ahmed-abdelkader/#/',
     color: '#2ecc71',
   },
   {
     title: 'Dr. Allam Clinic',
-    desc: { ar: 'موقع عيادة د. محمود علام أخصائي التغذية', en: 'Nutrition specialist clinic website' },
+    desc: {
+      ar: 'موقع عيادة د. محمود علام أخصائي التغذية',
+      en: 'Nutrition specialist clinic website',
+    },
     tags: ['React', 'React Router', 'CSS'],
     link: 'https://ahmedpaulo77.github.io/dr-allam-clinic/',
     color: '#f39c12',
   },
   {
     title: 'Dr. Mohamed Eye Clinic',
-    desc: { ar: 'موقع عيادة د. محمد عمر مصطفى استشاري طب وجراحة العيون', en: 'Eye surgery clinic website' },
-    tags: ['React', 'Firebase', 'CSS'],
+    desc: {
+      ar: 'موقع عيادة د. محمد عمر مصطفى استشاري طب وجراحة العيون',
+      en: 'Eye surgery clinic website',
+    },
+    tags: ['React', 'CSS', 'GitHub Pages'],
     link: 'https://ahmedpaulo77.github.io/dr-mohamed/',
     color: '#1E88E5',
   },
   {
+    title: 'Élégance – Women\'s Fashion Boutique',
+    desc: {
+      ar: 'متجر أزياء نسائية راقي بتصميم باريسي أنيق',
+      en: 'Elegant women\'s fashion boutique with a Parisian atelier feel',
+    },
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://ahmedpaulo77.github.io/Elegance/',
+    color: '#c2185b',
+  },
+  {
     title: 'ÉLITE Fashion Store',
-    desc: { ar: 'متجر أزياء عصري مبني بـ Vite + React', en: 'Modern fashion store built with Vite + React' },
+    desc: {
+      ar: 'متجر أزياء عصري مبني بـ Vite + React',
+      en: 'Modern fashion store built with Vite + React',
+    },
     tags: ['Vite', 'React', 'CSS'],
     link: 'https://ahmedpaulo77.github.io/elite/',
     color: '#e91e63',
   },
   {
-    title: 'إتقان - Maintenance Office',
-    desc: { ar: 'موقع مكتب صيانة وتشطيبات بنها', en: 'Maintenance & finishing office website in Benha' },
-    tags: ['React', 'React Router', 'CSS'],
+    title: 'إتقان – Maintenance Office',
+    desc: {
+      ar: 'موقع مكتب صيانة وتشطيبات بنها',
+      en: 'Maintenance & finishing office website in Benha',
+    },
+    tags: ['React', 'React Router', 'CSS', 'GitHub Pages'],
     link: 'https://ahmedpaulo77.github.io/etqan/#/',
     color: '#D4AF37',
   },
@@ -127,16 +167,22 @@ function Projects({ lang }) {
         <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">{t.subtitle}</p>
         <div className="projects-grid">
-          {projects.map((project, i) => (
-            <div className="project-card" key={i}>
+          {projects.map((project) => (
+            <div className="project-card" key={project.link}>
               <div className="project-top">
                 <div className="project-dots">
                   <span style={{background: '#ff5f57'}}></span>
                   <span style={{background: '#febc2e'}}></span>
                   <span style={{background: '#28c840'}}></span>
                 </div>
-                <a href={project.link} target="_blank" rel="noreferrer" className="project-link-icon">
-                  <i className="ti ti-external-link"></i>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link-icon"
+                  aria-label={`${t.btn}: ${project.title}`}
+                >
+                  <i className="ti ti-external-link" aria-hidden="true"></i>
                 </a>
               </div>
               <div className="project-body">
@@ -145,8 +191,8 @@ function Projects({ lang }) {
               </div>
               <div className="project-footer">
                 <div className="project-tags">
-                  {project.tags.map((tag, j) => (
-                    <span key={j} className="tag" style={{color: project.color, borderColor: project.color}}>
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="tag" style={{color: project.color, borderColor: project.color}}>
                       {tag}
                     </span>
                   ))}

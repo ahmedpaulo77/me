@@ -11,25 +11,34 @@ const skills = [
   { name: "CSS3", level: 90, icon: "ti-brand-css3", color: "#1572b6" },
   {
     name: "JavaScript",
-    level: 80,
+    level: 85,
     icon: "ti-brand-javascript",
     color: "#f7df1e",
   },
-  { name: "React.js", level: 80, icon: "ti-brand-react", color: "#61dafb" },
-  {
-    name: "Bootstrap",
-    level: 85,
-    icon: "ti-brand-bootstrap",
-    color: "#7952b3",
-  },
+  { name: "React.js", level: 85, icon: "ti-brand-react", color: "#61dafb" },
+  { name: "React Router", level: 85, icon: "ti-route", color: "#7c6ff7" },
+  { name: "Firebase", level: 85, icon: "ti-brand-firebase", color: "#ffca28" },
+  { name: "Vite", level: 85, icon: "ti-brand-vite", color: "#646cff" },
   {
     name: "Git & GitHub",
-    level: 75,
+    level: 80,
     icon: "ti-brand-github",
-    color: "#f1f1f1",
+    color: "#24292f",
   },
-  { name: "Firebase", level: 60, icon: "ti-brand-firebase", color: "#ffca28" },
-  { name: "React Router", level: 80, icon: "ti-route", color: "#7c6ff7" },
+  {
+    name: "Framer Motion",
+    level: 75,
+    icon: "ti-brand-framer",
+    color: "#e64b8c",
+  },
+  { name: "Three.js", level: 70, icon: "ti-3d-cube-sphere", color: "#049ef4" },
+  { name: "GSAP", level: 70, icon: "ti-bolt", color: "#88ce02" },
+  {
+    name: "Testing (Vitest)",
+    level: 65,
+    icon: "ti-test-pipe",
+    color: "#fcc72b",
+  },
 ];
 
 function Skills({ lang }) {
@@ -41,16 +50,14 @@ function Skills({ lang }) {
         <h2 className="section-title">{t.title}</h2>
         <p className="section-subtitle">{t.subtitle}</p>
         <div className="skills-grid">
-          {skills.map((skill, i) => (
-            <div className="skill-card" key={i}>
+          {skills.map((skill) => (
+            <div className="skill-card" key={skill.name}>
               <div className="skill-header">
                 <div className="skill-icon" style={{ color: skill.color }}>
-                  <i className={`ti ${skill.icon}`}></i>
+                  <i className={`ti ${skill.icon}`} aria-hidden="true"></i>
                 </div>
                 <div className="skill-info">
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                  </div>
+                  <span className="skill-name">{skill.name}</span>
                 </div>
               </div>
               <div className="skill-bar">

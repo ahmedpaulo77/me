@@ -12,15 +12,25 @@ import ScrollAnimation from './components/ScrollAnimation';
 import './App.css';
 
 function App() {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState('ar');
 
   // تحميل الإعدادات المحفوظة
   useEffect(() => {
     const savedLang = localStorage.getItem('lang');
-    if (savedLang) {
+    if (savedLang === 'ar' || savedLang === 'en') {
       setLang(savedLang);
     }
   }, []);
+
+  // مزامنة لغة واتجاه الصفحة مع الـ <html> + عنوان التاب
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.title =
+      lang === 'ar'
+        ? 'أحمد عبدالمقصود | مطور واجهات أمامية (React & Firebase)'
+        : 'Ahmed Abdelmaqsoud | Front-End Developer (React & Firebase)';
+  }, [lang]);
 
   // حفظ اللغة عند التغيير
   const handleLangChange = (newLang) => {
