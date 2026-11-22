@@ -27,6 +27,13 @@ const projects = [
     color: '#6366f1',
   },
   {
+    title: 'FORME – Fashion Brand',
+    desc: { ar: 'موقع براند أزياء عصري بتصميم أنيق وتجربة مستخدم سلسة', en: 'Modern fashion brand website with elegant design and smooth user experience' },
+    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+    link: 'https://ahmedpaulo77.github.io/clothes/',
+    color: '#c2185b',
+  },
+  {
     title: 'الكويرة – Football Quiz Platform',
     desc: {
       ar: '7 ألعاب كورة جماعية ثنائية اللغة، +1000 سؤال، من غير backend',
