@@ -34,6 +34,13 @@ const projects = [
     color: '#c2185b',
   },
   {
+    title: 'Personal Portfolio v2',
+    desc: { ar: 'بورتفوليو شخصي لعرض الأعمال بتصميم تفاعلي وأنيميشن متقدم', en: 'Personal portfolio showcasing work with interactive design and advanced animations' },
+    tags: ['React', 'TypeScript', 'Firebase', 'GSAP', 'Vite'],
+    link: 'https://ahmedpaulo77.github.io/my-portfolio/',
+    color: '#0ea5e9',
+  },
+  {
     title: 'الكويرة – Football Quiz Platform',
     desc: {
       ar: '7 ألعاب كورة جماعية ثنائية اللغة، +1000 سؤال، من غير backend',
