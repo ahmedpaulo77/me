@@ -41,6 +41,16 @@ const projects = [
     color: '#0ea5e9',
   },
   {
+    title: 'Savor – Restaurant & Reservations',
+    desc: {
+      ar: 'موقع مطعم عصري بالقاهرة: منيو تفاعلي بالتصنيفات والأسعار وصفحة حجز طاولات وقسم عن المطعم',
+      en: 'Modern Cairo restaurant site: filterable menu with prices, table reservations and an about page',
+    },
+    tags: ['React', 'TypeScript', 'CSS', 'HTML'],
+    link: 'https://ahmedpaulo77.github.io/restaurant/#/',
+    color: '#c2410c',
+  },
+  {
     title: 'الكويرة – Football Quiz Platform',
     desc: {
       ar: '7 ألعاب كورة جماعية ثنائية اللغة، +1000 سؤال، من غير backend',
